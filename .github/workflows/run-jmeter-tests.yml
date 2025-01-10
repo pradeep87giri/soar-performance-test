@@ -1,0 +1,49 @@
+name: Run JMeter BDD API Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Java
+      uses: actions/setup-java@v3
+      with:
+        java-version: '11' # Specify your Java version
+
+    - name: Set up Apache JMeter
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y wget
+        wget https://downloads.apache.org//jmeter/binaries/apache-jmeter-5.4.1.tgz
+        tar -xzf apache-jmeter-5.4.1.tgz
+        export JMETER_HOME=$PWD/apache-jmeter-5.4.1
+        export PATH=$JMETER_HOME/bin:$PATH
+
+    - name: Build with Maven
+      run: mvn clean install
+
+    - name: Run JMeter Tests
+      run: |
+        mvn test
+
+    - name: Generate HTML Report
+      run: |
+        mkdir -p results/html-report
+        jmeter -g results/LoadTest.jtl -o results/html-report
+
+    - name: Upload HTML Report
+      uses: actions/upload-artifact@v3
+      with:
+        name: html-report
+        path: results/html-report
