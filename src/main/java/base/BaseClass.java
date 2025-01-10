@@ -8,6 +8,9 @@ public class BaseClass {
     public static FileInputStream fis;
     public static String propertiesFilePath;
     public static Properties props = new Properties();
+    public String jtlFilePath = "results/LoadTest.jtl";
+    public String jmxFilePath;
+    public String modifiedJmxFilePath = "src/main/resources/ModifiedLoadTest.jmx";
 
     // Load Property file
     private static void loadPropFile() {
