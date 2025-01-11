@@ -1,0 +1,47 @@
+/*
+ * Created with iconvau.lt
+ */
+
+@font-face {
+  font-family: "iconvault";
+  src: url("iconvault_40b540908e32bb545e3f035f306c8084.eot");
+  src: url("iconvault_40b540908e32bb545e3f035f306c8084.eot?#iefix") format("embedded-opentype"),
+       url("iconvault_40b540908e32bb545e3f035f306c8084.woff") format("woff"),
+       url("iconvault_40b540908e32bb545e3f035f306c8084.ttf") format("truetype"),
+       url("iconvault_40b540908e32bb545e3f035f306c8084.svg#iconvault") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon-resources-01:before,
+.icon-information-01:before,
+.icon-general-01:before,
+.icon-forms-01:before,
+.icon-logs-01:before,
+.icon-complexity-01:before,
+.icon-defects-01:before,
+.icon-ux-01:before {
+  font-family: "iconvault";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  text-decoration: inherit;
+  font-size:36px;
+  padding-right:10px;
+  
+  
+}
+
+.icon-resources-01:before { content: "\f100"; }
+.icon-information-01:before { content: "\f101"; }
+.icon-general-01:before { content: "\f102"; }
+.icon-forms-01:before { content: "\f103"; }
+.icon-logs-01:before { content: "\f104"; }
+.icon-complexity-01:before { content: "\f105"; }
+.icon-defects-01:before { content: "\f106"; }
+.icon-ux-01:before { content: "\f107"; }
+
