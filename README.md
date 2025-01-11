@@ -21,7 +21,7 @@ This project is to check the performance of Flask App
  ```
 
 ## Running the tests
-
+Go to `src/test/resources/features/test.feature` and provide any random data for performance testing. Then run command:
  ```
  mvn test
  ```
