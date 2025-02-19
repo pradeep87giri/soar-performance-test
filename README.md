@@ -1,4 +1,4 @@
-# Soar - Flask App Performance Tests
+# Flask App Performance Tests
 
 This project is to check the performance of Flask App
 
